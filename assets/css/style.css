@@ -1,0 +1,125 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #6d0404;
+  height: 100vh;
+}
+.container{
+  margin: 80px auto;
+  width: 375px;
+  height: 200px;
+  border: 1px solid black;
+  background: radial-gradient(farthest-corner at 30vw 20vh, #cc7c7c 1%, #a52a2a 100%);
+}
+#dino{
+  width: 50px;
+  height: 50px;
+  background-image: url(/assets/img/tRex.png);
+  background-size: 50px 50px;
+  position: relative;
+  top: 155px;
+}
+
+.jump{
+  animation: jump 0.3s linear;
+}
+
+@keyframes jump{
+  0% {
+    top: 155px;
+  }
+  30% {
+    top: 125px;
+  }
+  50% {
+    top: 70px;
+  }
+  85% {
+    top: 125px;
+  }
+  100% {
+    top: 155px;
+  }
+}
+
+#cactus{
+  width: 20px;
+  height: 40px;
+  background-image: url(/assets/img/obstacle-small.png);
+  background-size: 20px 40px;
+  position: relative;
+  top: 115px;
+  left: 350px;
+  animation: block 1.5s infinite linear;
+}
+
+@keyframes block{
+  0% {
+    left: 350px;
+  }
+
+  100% {
+    left: -10px;
+  }
+}
+
+/* score */
+.labels{
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  transform: translateY(100%);
+  width: 375px;
+  border: 1px solid black;
+  color: aliceblue;
+  font-family: 'Galindo',
+  cursive;
+}
+.score {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+  transform: translateY(50%);
+  width: 375px;
+  border: 1px solid black;
+  color: aliceblue;
+  font-family: 'Galindo',
+    cursive;
+}
+/* background animation */
+.snow-bg {
+  position: relative;
+}
+
+.snow-bg:after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-image: url(/assets/img/snow.png),
+  url(/assets/img/snow2.png),
+  url(/assets/img/snow3.png);
+  animation: snow 10s linear infinite;
+}
+
+@keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px;
+  }
+
+  100% {
+    background-position: 500px 1000px, 200px 400px, -100px 300px;
+  }
+}
