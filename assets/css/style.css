@@ -17,7 +17,7 @@ body{
 #dino{
   width: 50px;
   height: 50px;
-  background-image: url("/assets/img/tRex.JPG");
+  background-image: url(../../assets/img/tRex.JPG);
   background-size: 50px 50px;
   position: relative;
   top: 155px;
@@ -48,7 +48,7 @@ body{
 #cactus{
   width: 20px;
   height: 40px;
-  background-image: url("/assets/img/obstacle-small.JPG");
+  background-image: url("../../assets/img/obstacle-small.JPG");
   background-size: 20px 40px;
   position: relative;
   top: 115px;
@@ -104,9 +104,9 @@ body{
   right: 0;
   bottom: 0;
   pointer-events: none;
-  background-image: url("/assets/img/snow.JPG"),
-  url("/assets/img/snow2.JPG"),
-  url("/assets/img/snow3.JPG");
+  background-image: url("../../assets/img/snow.JPG"),
+  url("../../assets/img/snow2.JPG"),
+  url("../../assets/img/snow3.JPG");
   animation: snow 10s linear infinite;
 }
 
